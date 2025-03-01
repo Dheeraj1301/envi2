@@ -1,0 +1,8 @@
+.github/workflows/.gitkeep      # To keep the GitHub Actions directory
+artifacts/.gitkeep              # To track artifacts directory
+artifacts/data_ingestion/.gitkeep
+artifacts/data_preprocessing/.gitkeep
+artifacts/model_training/.gitkeep
+artifacts/model_evaluation/.gitkeep
+artifacts/input/.gitkeep
+artifacts/output/.gitkeep

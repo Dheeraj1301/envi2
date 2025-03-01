@@ -1,0 +1,30 @@
+artifacts_root: artifacts
+
+data_ingestion:
+  root_dir: artifacts/data_ingestion
+  source_URL: https://github.com/Dheeraj1301/envi2/raw/refs/heads/main/xray_dataset_covid19.zip
+  local_data_file: artifacts/data_ingestion/data.zip
+  unzip_dir: artifacts/data_ingestion
+
+data_preprocessing:
+  root_dir: artifacts/data_preprocessing
+  processed_data_file: artifacts/data_preprocessing/processed_data.npy
+
+model_training:
+  root_dir: artifacts/model_training
+  model_path: artifacts/model_training/covid_model.h5
+  epochs: 20
+  batch_size: 32
+  image_size: [224, 224]
+  learning_rate: 0.001
+
+model_evaluation:
+  root_dir: artifacts/model_evaluation
+  model_path: artifacts/model_training/covid_model.h5
+  test_data_path: artifacts/data_preprocessing/test/
+  metrics_file: artifacts/model_evaluation/metrics.json
+
+prediction:
+  model_path: artifacts/model_training/covid_model.h5
+  input_image_path: artifacts/input/test_image.jpg
+  output_result_path: artifacts/output/prediction.json
